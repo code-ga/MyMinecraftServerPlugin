@@ -1,4 +1,4 @@
-package com.crimsonwarpedcraft.exampleplugin;
+package com.codega.exampleplugin;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package com.crimsonwarpedcraft.exampleplugin;
+package com.codega.exampleplugin;
 
 import io.papermc.lib.PaperLib;
 import org.bukkit.plugin.java.JavaPlugin;
