@@ -19,10 +19,6 @@ public class NBG_Plugin extends JavaPlugin {
 
     PluginManager pm = getServer().getPluginManager();
     getCommand("spawn").setExecutor(new Spawn());
-    ServerTickManager tickManager = getServer().getServerTickManager();
-    if (!tickManager.isFrozen() && getServer().getOnlinePlayers().isEmpty()) {
-      tickManager.setFrozen(true);
-    }
 
     saveDefaultConfig();
   }
