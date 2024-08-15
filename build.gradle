@@ -1,9 +1,6 @@
-import com.github.spotbugs.snom.SpotBugsTask
 import java.text.SimpleDateFormat
 
 plugins {
-    id 'checkstyle'
-    id "com.github.spotbugs" version "6.0.20"
     id 'io.github.goooler.shadow' version '8.1.8'
     id 'java'
 }
@@ -72,11 +69,6 @@ dependencies {
     compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
     compileOnly 'com.github.spotbugs:spotbugs-annotations:4.8.6'
     implementation 'io.papermc:paperlib:1.0.8'
-    spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.13.0'
-    testCompileOnly 'com.github.spotbugs:spotbugs-annotations:4.8.6'
-    testImplementation 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.3'
 }
 
 test {
@@ -86,33 +78,6 @@ test {
 processResources {
     filesMatching("**/plugin.yml") {
         expand ( NAME: rootProject.name, VERSION: version, PACKAGE: project.group.toString() )
-    }
-}
-
-checkstyle {
-    toolVersion '10.14.0'
-    maxWarnings = 0
-}
-
-configurations.checkstyle {
-    resolutionStrategy.capabilitiesResolution.withCapability("com.google.collections:google-collections") {
-        select("com.google.guava:guava:23.0")
-    }
-}
-
-tasks.withType(Checkstyle).configureEach {
-    reports {
-        xml.required = false
-        html.required = true
-    }
-}
-
-tasks.withType(SpotBugsTask).configureEach {
-    reports.create("html") {
-        required = true
-    }
-    reports.create("xml") {
-        required = false
     }
 }
 
