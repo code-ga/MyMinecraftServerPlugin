@@ -1,20 +1,12 @@
 main: ${PACKAGE}.${NAME}
-name: ${NAME}
-version: "${VERSION}"
-api-version: "1.16"
-author: AUTHOR
-description: DESCRIPTION
+name: NBG-Plugin
+version: "0.0.1"
+api-version: "1.21"
+author: Code-ga
+description: New bie gang server plugin
+softdepend: ['Multiverse-Core', 'Multiverse-Inventories']
 commands:
-  ex:
+  spawn:
     description: Base command for EXAMPLE
-    usage: "For a list of commands, type /ex help"
-    aliases: example
-permissions:
-  example.test:
-    description: DESCRIPTION
-    default: true
-  example.*:
-    description: Grants all other permissions
-    default: false
-    children:
-      example.test: true
+    usage: "Help you back to spawn by /spawn"
+    aliases: spawn
