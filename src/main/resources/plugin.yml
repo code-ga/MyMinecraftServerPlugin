@@ -10,3 +10,8 @@ commands:
     description: Base command for EXAMPLE
     usage: "Help you back to spawn by /spawn"
     aliases: spawn
+  giveGachaChest:
+    description: Give the gacha chest to you
+    usage: "giveGachaChest"
+    aliases: gachachest, gachachests
+    permission: giveGachaChest
