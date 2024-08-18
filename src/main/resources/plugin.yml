@@ -15,3 +15,7 @@ commands:
     usage: "giveGachaChest"
     aliases: gachachest, gachachests
     permission: giveGachaChest
+  shop:
+    description: Shop
+    usage: "shop"
+    aliases: shop
