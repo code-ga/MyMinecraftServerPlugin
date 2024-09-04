@@ -1,4 +1,4 @@
-package org.thedt.the_dt_plugin;
+package com.codega.nbgplugin;
 
 import org.bukkit.Location;
 import org.bukkit.command.Command;
