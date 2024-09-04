@@ -19,3 +19,6 @@ commands:
     description: Shop
     usage: "shop"
     aliases: shop
+  htp:
+    description: Teleport to where you spawned
+    usage: "/htp"
