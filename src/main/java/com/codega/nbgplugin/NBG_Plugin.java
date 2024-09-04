@@ -30,6 +30,7 @@ public class NBG_Plugin extends JavaPlugin {
     getCommand("spawn").setExecutor(new Spawn());
     getCommand("giveGachaChest").setExecutor(new GiveGachaChest(database));
     getCommand("shop").setExecutor(new Shop(database));
+    getCommand("htp").setExecutor(new HOME_TP());
     saveDefaultConfig();
   }
 
